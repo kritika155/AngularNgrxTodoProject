@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,7 +14,6 @@ import { TodosEffects } from './common/stores/effects/todo.effect';
   imports: [
     CommonModule,
     HttpClientModule,
-    NgbModule,
     FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
