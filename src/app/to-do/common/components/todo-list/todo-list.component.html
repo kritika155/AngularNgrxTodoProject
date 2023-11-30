@@ -1,0 +1,29 @@
+<div class="container-fluid" *ngIf="todos">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mt-5">
+        <div class="card-header">
+          <h1 class="display-6 d-inline">Todo App</h1>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <tbody>
+              <tr
+                *ngFor="
+                  let todo of todos
+                    | paginate : { itemsPerPage: 10, currentPage: p }
+                "
+              >
+                <td>
+                  <code>{{ todo | json }}</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
