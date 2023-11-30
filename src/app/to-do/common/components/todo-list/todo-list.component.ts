@@ -19,6 +19,7 @@ export class TodoListComponent implements OnInit {
     this.store.dispatch(new Todos.GetTodos());
     this.store.select('todos').subscribe(
       (response) => {
+        console.log(response);
         this.todos = response.todoList;
         this.message = response.message;
         this.bgClass = response.infoClass;

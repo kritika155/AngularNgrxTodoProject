@@ -12,7 +12,7 @@ export class TodosService {
   baseUrl: string;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = 'https://jsonplaceholder.typicode.com/todos';
+    this.baseUrl = 'https://jsonplaceholder.typicode.com';
   }
 
   getAPITodos() {

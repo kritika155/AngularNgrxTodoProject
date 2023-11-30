@@ -17,9 +17,9 @@ import { TodosEffects } from './common/stores/effects/todo.effect';
     FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
-    StoreModule.forRoot({}),
+
     StoreModule.forFeature('todos', todosReducer),
-    EffectsModule.forRoot([]),
+
     EffectsModule.forFeature([TodosEffects]),
   ],
   providers: [TodosService],
